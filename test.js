@@ -1,27 +1,26 @@
-'use strict';
-var test = require('ava');
-var numberIsNan = require('number-is-nan');
-var positiveZero = require('positive-zero');
-var negativeZero = require('negative-zero');
-Math.cbrt = undefined;
-var cbrt = require('./');
+import test from 'ava';
+import numberIsNan from 'number-is-nan';
+import positiveZero from 'positive-zero';
+import negativeZero from 'negative-zero';
 
-test(function (t) {
-	t.assert(numberIsNan(cbrt(NaN)));
-	t.assert(positiveZero(cbrt(+0)));
-	t.assert(negativeZero(cbrt(-0)));
-	t.assert(cbrt(Infinity) === Infinity);
-	t.assert(cbrt(-Infinity) === -Infinity);
-	t.assert(cbrt(0) === 0);
-	t.assert(cbrt(-1) === -1);
-	t.assert(cbrt(1) === 1);
-	t.assert(cbrt(-8) === -2);
-	t.assert(cbrt(8) === 2);
-	t.assert(cbrt(-1000) === -10);
-	t.assert(cbrt(1000) === 10);
-	t.assert(cbrt(-1e-300) === -1e-100);
-	t.assert(cbrt(1e-300) === 1e-100);
-	t.assert(cbrt(-1e+300) === -1e+100);
-	t.assert(cbrt(1e+300) === 1e+100);
-	t.end();
+Math.cbrt = undefined;
+const m = require('./');
+
+test(t => {
+	t.true(numberIsNan(m(NaN)));
+	t.true(positiveZero(m(+0)));
+	t.true(negativeZero(m(-0)));
+	t.is(m(Infinity), Infinity);
+	t.is(m(-Infinity), -Infinity);
+	t.is(m(0), 0);
+	t.is(m(-1), -1);
+	t.is(m(1), 1);
+	t.is(m(-8), -2);
+	t.is(m(8), 2);
+	t.is(m(-1000), -10);
+	t.is(m(1000), 10);
+	t.is(m(-1e-300), -1e-100);
+	t.is(m(1e-300), 1e-100);
+	t.is(m(-1e+300), -1e+100);
+	t.is(m(1e+300), 1e+100);
 });

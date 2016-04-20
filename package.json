@@ -1,7 +1,7 @@
 {
   "name": "cbrt",
   "version": "1.0.0",
-  "description": "ES6 Math.cbrt() ponyfill",
+  "description": "ES2015 Math.cbrt() ponyfill",
   "license": "MIT",
   "repository": "sindresorhus/cbrt",
   "author": {
@@ -19,9 +19,7 @@
     "index.js"
   ],
   "keywords": [
-    "es6",
     "es2015",
-    "ecmascript",
     "ponyfill",
     "polyfill",
     "shim",

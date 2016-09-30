@@ -1,8 +1,6 @@
 # cbrt [![Build Status](https://travis-ci.org/sindresorhus/cbrt.svg?branch=master)](https://travis-ci.org/sindresorhus/cbrt)
 
-> ES2015 [`Math.cbrt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt) ponyfill
-
-> Ponyfill: A polyfill that doesn't overwrite the native method
+> ES2015 [`Math.cbrt()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/cbrt) [ponyfill](https://ponyfill.com)
 
 
 ## Install

@@ -2,9 +2,7 @@ import test from 'ava';
 import numberIsNan from 'number-is-nan';
 import positiveZero from 'positive-zero';
 import negativeZero from 'negative-zero';
-
-Math.cbrt = undefined;
-const m = require('./');
+import m from '.';
 
 test(t => {
 	t.true(numberIsNan(m(NaN)));

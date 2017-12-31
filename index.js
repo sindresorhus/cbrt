@@ -1,19 +1,19 @@
 'use strict';
-var isFinite = require('is-finite');
+const isFinite = require('is-finite');
 
-module.exports = Math.cbrt || function (x) {
-	if (x === 0 || !isFinite(x)) {
-		return x;
+module.exports = value => {
+	if (value === 0 || !isFinite(value)) {
+		return value;
 	}
 
-	var neg = x < 0;
+	const neg = value < 0;
 
 	if (neg) {
-		x = -x;
+		value = -value;
 	}
 
-	var ret = Math.exp(Math.log(x) / 3);
-	ret = (x / (ret * ret) + (2 * ret)) / 3;
+	let ret = Math.exp(Math.log(value) / 3);
+	ret = ((value / (ret * ret)) + (2 * ret)) / 3;
 
 	return neg ? -ret : ret;
 };

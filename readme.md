@@ -6,14 +6,14 @@
 ## Install
 
 ```
-$ npm install --save cbrt
+$ npm install cbrt
 ```
 
 
 ## Usage
 
 ```js
-var cbrt = require('cbrt');
+const cbrt = require('cbrt');
 
 cbrt(1000);
 //=> 10
@@ -22,4 +22,4 @@ cbrt(1000);
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)

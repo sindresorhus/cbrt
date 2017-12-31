@@ -1,41 +1,42 @@
 {
-  "name": "cbrt",
-  "version": "1.0.1",
-  "description": "ES2015 Math.cbrt() ponyfill",
-  "license": "MIT",
-  "repository": "sindresorhus/cbrt",
-  "author": {
-    "name": "Sindre Sorhus",
-    "email": "sindresorhus@gmail.com",
-    "url": "sindresorhus.com"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "scripts": {
-    "test": "ava"
-  },
-  "files": [
-    "index.js"
-  ],
-  "keywords": [
-    "es2015",
-    "ponyfill",
-    "polyfill",
-    "shim",
-    "number",
-    "math",
-    "cbrt",
-    "cube",
-    "root"
-  ],
-  "dependencies": {
-    "is-finite": "^1.0.1"
-  },
-  "devDependencies": {
-    "ava": "*",
-    "negative-zero": "^1.0.0",
-    "number-is-nan": "^1.0.0",
-    "positive-zero": "^1.0.0"
-  }
+	"name": "cbrt",
+	"version": "1.0.1",
+	"description": "ES2015 Math.cbrt() ponyfill",
+	"license": "MIT",
+	"repository": "sindresorhus/cbrt",
+	"author": {
+		"name": "Sindre Sorhus",
+		"email": "sindresorhus@gmail.com",
+		"url": "sindresorhus.com"
+	},
+	"engines": {
+		"node": ">=4"
+	},
+	"scripts": {
+		"test": "xo && ava"
+	},
+	"files": [
+		"index.js"
+	],
+	"keywords": [
+		"es2015",
+		"ponyfill",
+		"polyfill",
+		"shim",
+		"number",
+		"math",
+		"cbrt",
+		"cube",
+		"root"
+	],
+	"dependencies": {
+		"is-finite": "^1.0.1"
+	},
+	"devDependencies": {
+		"ava": "*",
+		"negative-zero": "^2.0.0",
+		"number-is-nan": "^1.0.0",
+		"positive-zero": "^2.0.0",
+		"xo": "*"
+	}
 }
